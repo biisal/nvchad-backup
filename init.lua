@@ -24,9 +24,10 @@ require "plugins"
 vim.opt.clipboard = "unnamedplus"  -- Use system clipboard
 vim.g.mapleader = " "  -- Set leader key to Space
 vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true })  -- Copy to clipboard
-vim.diagnostic.config({
-  virtual_text = true,
-  update_in_insert = true, -- Enables showing diagnostics in insert mode
-  severity_sort = true,
-})
+-- vim.diagnostic.config({
+--   virtual_text = false,
+--   update_in_insert = true, -- Enables showing diagnostics in insert mode
+--   severity_sort = true,
+-- })
+
 

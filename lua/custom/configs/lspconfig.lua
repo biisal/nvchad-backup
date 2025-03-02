@@ -31,7 +31,26 @@ cmd = {'gopls'},
 lspconfig.vtsls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "json" },
+  filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "json" , "html" },
   root_dir = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
 }
 
+-- HTML LSP
+lspconfig.html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "html" },
+}
+
+-- CSS LSP
+lspconfig.cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "css", "scss", "less" },
+}
+-- TAILWIND LSP
+lspconfig.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "css", "scss", "less" , "typescriptreact" , "javascriptreact" , "html" },
+}

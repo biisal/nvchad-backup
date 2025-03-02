@@ -10,11 +10,13 @@ local plugins = {
   "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "tailwindcss-language-server",
         "gopls",
         "vtsls",
-       -- "mypy",
         "ruff",
         "pyright",
+         "html-lsp", 
+        "css-lsp", 
       },
     },
   },
@@ -24,6 +26,5 @@ local plugins = {
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end,
-  },
-}
+  }, }
 return plugins
