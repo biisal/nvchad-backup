@@ -15,7 +15,7 @@ lspconfig.pyright.setup {
         typeCheckingMode = "strict",
       },
       diagnosticSeverityOverrides = {
-          reportMissingReturnType = "error",  
+          reportMissingReturnType = "error",
       },
     },
   },
