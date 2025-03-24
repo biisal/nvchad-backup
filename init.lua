@@ -19,8 +19,8 @@ end
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
-
-
+vim.opt.wrap = false
+vim.opt.termguicolors = true
 vim.opt.clipboard = "unnamedplus"  -- Use system clipboard
 vim.g.mapleader = " "  -- Set leader key to Space
 vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true })  -- Copy to clipboard
@@ -30,4 +30,7 @@ vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true })  -- C
 --   severity_sort = true,
 -- })
 
+require("notify").setup({
+  background_colour = "#000000",
+})
 
